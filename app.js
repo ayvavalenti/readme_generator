@@ -1,22 +1,7 @@
-var readMeDataArgs = process.argv.slice(2, process.argv.length);
-console.log(readMeDataArgs);
+var inquirer = require('inquirer');
+inquirer
 
-  // one argument at a time
-
-  const printReadMeData = readMeDataArr => {
-    for (let i = 0; i < readMeDataArr.length; i ++) {
-      console.log(readMeDataArr[i]);
-    }
-  };
-
-  printReadMeData(readMeDataArgs);
-
-const inquirer = require('inquirer');  
-
-console.log(inquirer);
-
-const promptUser = () => {
-    return inquirer.prompt([
+.prompt([
       {
         type: 'input',
         name: 'project name',
@@ -29,8 +14,12 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      }
+    ])
+    .then(answers => console.log(answers))
+      
+    
+    .prompt([{
         type: 'input',
         name: 'project description',
         message: 'What does your project do?',
@@ -42,8 +31,11 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      }
+    ])
+    .then(answers => console.log(answers))
+      
+    .prompt([{
         type: 'input',
         name: 'description',
         message: 'Why did you create this project?',
@@ -55,8 +47,10 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      } ])
+      .then(answers => console.log(answers))
+      
+      .prompt([{
         type: 'input',
         name: 'description',
         message: 'What problem does this project solve?',
@@ -68,8 +62,11 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      }
+    ])
+    .then(answers => console.log(answers))
+
+    .prompt([{
         type: 'input',
         name: 'description',
         message: 'What did you learn while creating this project??',
@@ -81,10 +78,13 @@ const promptUser = () => {
               return false;
             }
           }
-      },
+      }
+    ])
+    .then(answers => console.log(answers))
 
       // table to contents option
-      {
+
+      .prompt([{
         type: 'input',
         name: 'installation',
         message: 'how is this project installed?',
@@ -96,8 +96,11 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      }
+    ])
+      .then(answers => console.log(answers))
+
+      .prompt([{
         type: 'input',
         name: 'usage',
         message: 'how is your project used?',
@@ -109,8 +112,11 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      }
+    ])
+    .then(answers => console.log(answers))
+
+    .prompt([{
         type: 'input',
         name: 'credits',
         message: 'did you recieve any help while creating this project, this includes collaborators, tutorials, or third party assests? if so plaese include links to that information.',
@@ -121,8 +127,11 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-      {
+      }
+    ])
+    .then(answers => console.log(answers))
+
+    .prompt([{
         type: 'input',
         name: 'tests',
         message: 'What are some tests for your project?',
@@ -134,11 +143,12 @@ const promptUser = () => {
               return false;
             }
           }
-      },
+      } ])
+      .then(answers => console.log(answers))
 
       //liscence
 
-      {
+      .prompt([{
         type: 'input',
         name: 'licence',
         message: 'What license would you like for this application?',
@@ -150,13 +160,7 @@ const promptUser = () => {
               return false;
             }
           }
-      },
-    ]);
-  };
+      } ])
+      .then(answers => console.log(answers));
   
- 
-promptUser()
-.then(promptProject)
-.then(readMeData => {
-});
 
