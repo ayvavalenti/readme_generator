@@ -4,7 +4,7 @@ console.log(readMeDataArgs);
   // one argument at a time
 
   const printReadMeData = readMeDataArr => {
-    for (let i = 0; i < readMeDataArr.length; i += 1) {
+    for (let i = 0; i < readMeDataArr.length; i ++) {
       console.log(readMeDataArr[i]);
     }
   };

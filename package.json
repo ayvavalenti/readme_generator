@@ -6,9 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Ayva Valenti",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.2"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayvavalenti/readme_generator.git"
+  },
+  "keywords": [
+    "read-me"
+  ],
+  "bugs": {
+    "url": "https://github.com/ayvavalenti/readme_generator/issues"
+  },
+  "homepage": "https://github.com/ayvavalenti/readme_generator#readme"
 }
